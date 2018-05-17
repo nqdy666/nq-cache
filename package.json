@@ -23,7 +23,12 @@
     "url": "https://github.com/nqdy666/nq-cache"
   },
   "keywords": [
-    "cache"
+    "cache",
+    "nq-cache",
+    "function",
+    "pure-function",
+    "memory",
+    "storage"
   ],
   "files": [
     "lib",
