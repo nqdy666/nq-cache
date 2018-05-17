@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@git.sdp.nd:264312/nq-cached.git"
+    "url": "https://github.com/nqdy666/nq-cache"
   },
   "keywords": [
     "cache"
