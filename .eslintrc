@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "extends": [
+    "standard",
+    "plugin:flowtype/recommended",
+    "plugin:jest/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "globals": {
+    "expect": false
+  },
+  "settings": {
+    "flowtyped": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[ignore]
+.*/test/.*
+.*/dist/.*
+.*/lib/.*
+.*/es/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+emoji=true
+module.ignore_non_literal_requires=true
+[strict]

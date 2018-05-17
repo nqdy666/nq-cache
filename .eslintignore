@@ -1,0 +1,6 @@
+coverage
+dist
+lib
+es
+node_modules
+flow-typed
