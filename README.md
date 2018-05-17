@@ -1,6 +1,8 @@
 NQ-CACHE
 =
 
+[![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)
+
 ## 安装
 
 ```bash
