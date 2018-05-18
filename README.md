@@ -1,7 +1,7 @@
 NQ-CACHE
 =
 
-[![build status][https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master]][https://travis-ci.org/nqdy666/nq-cache]
+[![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)
 [![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)
 
 ## 安装
