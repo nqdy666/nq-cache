@@ -16,7 +16,8 @@
     "log": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m \"Update CHANGELOG.md\"",
     "compile:cjs": "cross-env NODE-ENV=production && babel src -d lib --no-babelrc --presets=@babel/preset-env,@babel/preset-stage-0,@babel/preset-flow",
     "compile:es": "cross-env NODE-ENV=production && babel src -d es --no-babelrc --presets=@babel/preset-stage-0,@babel/preset-flow",
-    "postversion": "npm run log"
+    "postversion": "npm run log",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
