@@ -5,8 +5,13 @@ module.exports = {
   'custom_commands_path': ['node_modules/nightwatch-helpers/commands'],
   'custom_assertions_path': ['node_modules/nightwatch-helpers/assertions'],
   
+  test_workers: {
+    enabled: true,
+    workers: 'auto'
+  },
+  
   'selenium': {
-    'start_process': false,
+    'start_process': !process.env.TRAVIS_JOB_NUMBER, // no start when travis
     'server_path': require('selenium-server').path,
     'host': '127.0.0.1',
     'port': 4445,
@@ -31,6 +36,7 @@ module.exports = {
       },
       'desiredCapabilities': {
         'build': `build-${process.env.TRAVIS_JOB_NUMBER}`,
+        'passed': true,
         'public': 'public',
         'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER
       }
