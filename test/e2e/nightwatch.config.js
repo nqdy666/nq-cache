@@ -6,7 +6,7 @@ module.exports = {
   'custom_assertions_path': ['node_modules/nightwatch-helpers/assertions'],
   
   'selenium': {
-    'start_process': false,
+    'start_process': true,
     'server_path': require('selenium-server').path,
     'host': '127.0.0.1',
     'port': 4445,
@@ -20,14 +20,19 @@ module.exports = {
     'default': {
       'selenium_port': 4445,
       'selenium_host': 'localhost',
-      'username': process.env.SAUCE_USERNAME,
-      'access_key': process.env.SAUCE_ACCESS_KEY,
+      'username': 'nqdy666',
+      'access_key': '11843f06-009f-4ad0-a4e3-16e705edaf32',
       'silent': true,
       'screenshots': {
         'enabled': true,
         'on_failure': true,
         'on_error': false,
         'path': 'test/e2e/screenshots'
+      },
+      'desiredCapabilities': {
+        'build': `build-${process.env.TRAVIS_JOB_NUMBER}`,
+        'public': 'public',
+        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER
       }
     },
     
