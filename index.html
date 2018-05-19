@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | nq-cache</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="cache"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="nq-cache"><meta property="twitter:description" content="cache"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/nqdy666/nq-cache"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#cache">cache</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-promiseCache">promiseCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-promiseSessionStorageCache">promiseSessionStorageCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-pureFuncCache">pureFuncCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-clearCache">clearCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-push">push</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-argToKey">argToKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SessionStorage">SessionStorage</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><p>NQ-CACHE
+=</p>
+<p><a href="https://travis-ci.org/nqdy666/nq-cache"><img src="https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master" alt="build status"></a>
+<a href="https://codecov.io/gh/nqdy666/nq-cache"><img src="https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg" alt="codecov"></a>
+<a href="http://nodejs.org/download/"><img src="https://img.shields.io/badge/node.js-%3E=_8.0-green.svg?style=flat-square" alt="node version"></a>
+<a href="https://david-dm.org/nqdy666/nq-cache"><img src="https://img.shields.io/david/nqdy666/nq-cache.svg?style=flat-square" alt="David deps"></a>
+<a href="https://www.npmjs.com/package/nq-cache"><img src="https://img.shields.io/npm/l/nq-cache.svg" alt="license"></a></p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2><pre><code class="lang-bash"><code class="source-code prettyprint">npm install nq-cache</code>
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2><ul>
+<li><code>ES Module</code></li>
+</ul>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } from &apos;nq-cache&apos;</code>
+</code></pre>
+<ul>
+<li><code>commonjs</code></li>
+</ul>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require(&apos;nq-cache&apos;)</code>
+</code></pre>
+<ul>
+<li><code>UMD</code>(&#x672A;&#x538B;&#x7F29;&#x4E14;&#x4FDD;&#x7559;&#x6CE8;&#x91CA;&#xFF0C;&#x9700;&#x81EA;&#x884C;&#x5F15;&#x5165; <code>uglify</code> &#x5904;&#x7406;)</li>
+</ul>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require(&apos;nq-cache/dist/nq-cache&apos;)</code>
+</code></pre>
+<ul>
+<li><code>iife</code></li>
+</ul>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;script type=&quot;text/javascript&quot; href=&quot;nq-cache/dist/nq-cache.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  var cache = window.cache
+&lt;/script&gt;</code>
+</code></pre>
+<h2 id="&#x672C;&#x5730;&#x5F00;&#x53D1;">&#x672C;&#x5730;&#x5F00;&#x53D1;</h2><ul>
+<li>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install</code>
+</code></pre>
+<ul>
+<li>&#x6D4B;&#x8BD5;</li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm test</code>
+</code></pre>
+<ul>
+<li>&#x6253;&#x5305;</li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run build</code>
+</code></pre>
+<ul>
+<li><code>Flow</code></li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run flow</code>
+</code></pre>
+<ul>
+<li><code>ESLint</code></li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run lint</code>
+</code></pre>
+<ul>
+<li>&#x66F4;&#x65B0;&#x6587;&#x6863;</li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run doc</code>
+</code></pre>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

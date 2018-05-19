@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/cache/promise-ss.js | nq-cache</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="cache"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="nq-cache"><meta property="twitter:description" content="cache"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/nqdy666/nq-cache"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#cache">cache</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-promiseCache">promiseCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-promiseSessionStorageCache">promiseSessionStorageCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-pureFuncCache">pureFuncCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-clearCache">clearCache</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-push">push</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#utils">utils</a><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-argToKey">argToKey</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SessionStorage">SessionStorage</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/cache/promise-ss.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// @flow
+import store from &apos;./store&apos;
+import { SessionStorage } from &apos;../utils/storage&apos;
+import { argToKey } from &apos;../utils/assist&apos;
+
+/**
+ * &#x5F02;&#x6B65;&#x7684;&#x7ED3;&#x679C;&#x7F13;&#x5B58;&#x5728;session storage&#x4E2D;&#xFF0C;&#x4E0B;&#x6B21;&#x8C03;&#x7528;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x6570;&#x636E;
+ * @param {Function} fn - &#x8FD4;&#x56DE;&#x503C;&#x662F;Promise&#x7684;&#x51FD;&#x6570;
+ * @param {Function} storageKey - &#x7F13;&#x5B58;&#x5728;session storage&#x4E2D;&#x7684;key&#x524D;&#x7F00;
+ * @returns {Function} &#x548C;&#x539F;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x6570;&#x636E;&#x7F13;&#x5B58;&#x540E;&#xFF0C;&#x4E4B;&#x540E;&#x7684;&#x8C03;&#x7528;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;&#x539F;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x662F;&#x4F1A;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x540E;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53E6;&#x5916;&#x8BE5;&#x51FD;&#x6570;&#x8FD8;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x7684;clearCache&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6E05;&#x7A7A;&#x7F13;&#x5B58;&#x6570;&#x636E;
+ * @property {Function} clearCache &#x6E05;&#x7A7A;&#x7F13;&#x5B58;&#x6570;&#x636E;
+ */
+export default function promiseSessionStorageCache&lt;F: Function&gt; (fn: F, storageKey: string): F {
+  let cache = SessionStorage.get(storageKey) || {}
+  const cachedFn = (function cachedFn (...arg: Array&lt;any&gt;) {
+    let key = argToKey(...arg)
+    return cache.hasOwnProperty(key)
+      ? Promise.resolve(cache[key])
+      : fn(...arg).then(res =&gt; {
+        cache[key] = res
+        SessionStorage.set(storageKey, cache)
+        return Promise.resolve(res)
+      })
+  }: any)
+  cachedFn.clearCache = function (key?: string): void {
+    if (key) {
+      delete cache[key]
+      SessionStorage.set(storageKey, cache)
+    } else {
+      cache = {}
+      SessionStorage.remove(storageKey)
+    }
+  }
+  cachedFn.funType = &apos;promise&apos;
+  cachedFn.cacheType = &apos;sessionStorage&apos;
+  cachedFn.cacheKey = storageKey
+  cachedFn.originFunName = fn.name
+  store.push(cachedFn)
+  return cachedFn
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

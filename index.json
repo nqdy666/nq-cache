@@ -1,0 +1,965 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/cache/promise-mm.js",
+    "content": "// @flow\nimport store from './store'\nimport { argToKey } from '../utils/assist'\n\n/**\n * 异步的结果缓存在内存中，下次调用直接使用缓存数据\n * @param {Function} fn - 纯函数\n * @returns {Function} 和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据\n * @property {Function} clearCache 清空缓存数据\n */\nexport default function promiseCache<F: Function> (fn: F): F {\n  let cache = {}\n  const cachedFn = (function cachedFn (...arg: Array<any>) {\n    let key = argToKey(...arg)\n    return cache.hasOwnProperty(key)\n      ? Promise.resolve(cache[key])\n      : fn(...arg).then(res => {\n        cache[key] = res\n        return Promise.resolve(res)\n      })\n  }: any)\n  cachedFn.clearCache = function (key?: string): void {\n    if (key) {\n      delete cache[key]\n    } else {\n      cache = {}\n    }\n  }\n  cachedFn.funType = 'promise'\n  cachedFn.cacheType = 'memory'\n  cachedFn.originFunName = fn.name\n  store.push(cachedFn)\n  return cachedFn\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/cache/promise-mm.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "function",
+    "name": "promiseCache",
+    "memberof": "src/cache/promise-mm.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/cache/promise-mm.js~promiseCache",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/cache/promise-mm.js",
+    "importStyle": "promiseCache",
+    "description": "异步的结果缓存在内存中，下次调用直接使用缓存数据",
+    "lineNumber": 11,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Function} 和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "纯函数"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "clearCache",
+        "description": "清空缓存数据"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据"
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/cache/promise-ss.js",
+    "content": "// @flow\nimport store from './store'\nimport { SessionStorage } from '../utils/storage'\nimport { argToKey } from '../utils/assist'\n\n/**\n * 异步的结果缓存在session storage中，下次调用直接使用缓存数据\n * @param {Function} fn - 返回值是Promise的函数\n * @param {Function} storageKey - 缓存在session storage中的key前缀\n * @returns {Function} 和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据\n * @property {Function} clearCache 清空缓存数据\n */\nexport default function promiseSessionStorageCache<F: Function> (fn: F, storageKey: string): F {\n  let cache = SessionStorage.get(storageKey) || {}\n  const cachedFn = (function cachedFn (...arg: Array<any>) {\n    let key = argToKey(...arg)\n    return cache.hasOwnProperty(key)\n      ? Promise.resolve(cache[key])\n      : fn(...arg).then(res => {\n        cache[key] = res\n        SessionStorage.set(storageKey, cache)\n        return Promise.resolve(res)\n      })\n  }: any)\n  cachedFn.clearCache = function (key?: string): void {\n    if (key) {\n      delete cache[key]\n      SessionStorage.set(storageKey, cache)\n    } else {\n      cache = {}\n      SessionStorage.remove(storageKey)\n    }\n  }\n  cachedFn.funType = 'promise'\n  cachedFn.cacheType = 'sessionStorage'\n  cachedFn.cacheKey = storageKey\n  cachedFn.originFunName = fn.name\n  store.push(cachedFn)\n  return cachedFn\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/cache/promise-ss.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "promiseSessionStorageCache",
+    "memberof": "src/cache/promise-ss.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/cache/promise-ss.js~promiseSessionStorageCache",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/cache/promise-ss.js",
+    "importStyle": "promiseSessionStorageCache",
+    "description": "异步的结果缓存在session storage中，下次调用直接使用缓存数据",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Function} 和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "返回值是Promise的函数"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "storageKey",
+        "description": "缓存在session storage中的key前缀"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "clearCache",
+        "description": "清空缓存数据"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据"
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "name": "src/cache/pure-func-mm.js",
+    "content": "// @flow\nimport store from './store'\nimport { argToKey } from '../utils/assist'\n\n/**\n * 纯函数执行的结果缓存在内存中，下次调用直接使用缓存数据\n * @param {Function} fn - 返回值是Promise的函数\n * @returns {Function} 和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据\n * @property {Function} clearCache 清空缓存数据\n */\nexport default function pureFuncCache<F: Function> (fn: F): F {\n  let cache = {}\n  const cachedFn = (function cachedFn (...arg: Array<any>) {\n    const cacheKey = argToKey(...arg)\n    return cache.hasOwnProperty(cacheKey) ? cache[cacheKey] : (cache[cacheKey] = fn(...arg))\n  }: any)\n\n  cachedFn.clearCache = function (key?: string): void {\n    if (key) {\n      delete cache[key]\n    } else {\n      cache = {}\n    }\n  }\n\n  cachedFn.funType = 'pureFunc'\n  cachedFn.cacheType = 'memory'\n  cachedFn.originFunName = fn.name\n  store.push(cachedFn)\n\n  return cachedFn\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/cache/pure-func-mm.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "pureFuncCache",
+    "memberof": "src/cache/pure-func-mm.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/cache/pure-func-mm.js~pureFuncCache",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/cache/pure-func-mm.js",
+    "importStyle": "pureFuncCache",
+    "description": "纯函数执行的结果缓存在内存中，下次调用直接使用缓存数据",
+    "lineNumber": 11,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Function} 和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "返回值是Promise的函数"
+      }
+    ],
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "clearCache",
+        "description": "清空缓存数据"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Function"
+      ],
+      "spread": false,
+      "description": "和原函数的调用方式是一样的，第一次调用数据缓存后，之后的调用不会调用原函数，而是会直接使用缓存后的数据，另外该函数还带有一个静态的clearCache方法，可以用来清空缓存数据"
+    }
+  },
+  {
+    "__docId__": 54,
+    "kind": "file",
+    "name": "src/cache/store.js",
+    "content": "// @flow\n/**\n * 缓存函数数组\n * @type {Array}\n */\nconst cacheFunList = []\n\n/**\n * 把缓存函数加入到数组中\n * @param {Function} func - 函数\n */\nexport function push (func: Function): void {\n  cacheFunList.push(func)\n}\n\n/**\n * 清空在数组中函数的缓存数据\n */\nexport function clearCache (): void {\n  cacheFunList.forEach(func => {\n    func.clearCache()\n  })\n}\n\nexport default {\n  push,\n  clearCache\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/cache/store.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "name": "cacheFunList",
+    "memberof": "src/cache/store.js",
+    "static": true,
+    "longname": "src/cache/store.js~cacheFunList",
+    "access": "public",
+    "export": false,
+    "importPath": "nq-cache/src/cache/store.js",
+    "importStyle": null,
+    "description": "缓存函数数组",
+    "lineNumber": 6,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "push",
+    "memberof": "src/cache/store.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/cache/store.js~push",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/cache/store.js",
+    "importStyle": "{push}",
+    "description": "把缓存函数加入到数组中",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "func",
+        "description": "函数"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "clearCache",
+    "memberof": "src/cache/store.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/cache/store.js~clearCache",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/cache/store.js",
+    "importStyle": "{clearCache}",
+    "description": "清空在数组中函数的缓存数据",
+    "lineNumber": 19,
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 58,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "export { argToKey } from './utils/assist'\nexport promiseMemoryCache from './cache/promise-mm'\nexport promiseSessionStorageCache from './cache/promise-ss'\nexport pureFuncMemoryCache from './cache/pure-func-mm'\nexport { clearCache } from './cache/store'\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/utils/assist.js",
+    "content": "// @flow\n/**\n * 把参数转换为key\n * @param {...} arg - 可以有多个参数\n * @returns {string} 用作缓存数据的key\n */\nexport function argToKey (...arg: Array<any>): string {\n  return JSON.stringify(arg)\n}\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/utils/assist.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "function",
+    "name": "argToKey",
+    "memberof": "src/utils/assist.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils/assist.js~argToKey",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/utils/assist.js",
+    "importStyle": "{argToKey}",
+    "description": "把参数转换为key",
+    "lineNumber": 7,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string} 用作缓存数据的key"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "..."
+        ],
+        "spread": true,
+        "optional": false,
+        "name": "arg",
+        "description": "可以有多个参数"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": "用作缓存数据的key"
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "name": "src/utils/storage.js",
+    "content": "// @flow\nimport Storage from 'nd-storage'\n\n/**\n * session storage\n * @type {Storage}\n */\nexport const SessionStorage = new Storage('S-CACHE-', -1)\n",
+    "static": true,
+    "longname": "/home/travis/build/nqdy666/nq-cache/src/utils/storage.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 62,
+    "kind": "variable",
+    "name": "SessionStorage",
+    "memberof": "src/utils/storage.js",
+    "static": true,
+    "longname": "src/utils/storage.js~SessionStorage",
+    "access": "public",
+    "export": true,
+    "importPath": "nq-cache/src/utils/storage.js",
+    "importStyle": "{SessionStorage}",
+    "description": "session storage",
+    "lineNumber": 8,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Storage"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "kind": "index",
+    "content": "NQ-CACHE\n=\n\n[![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)\n[![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)\n[![node version](https://img.shields.io/badge/node.js-%3E=_8.0-green.svg?style=flat-square)](http://nodejs.org/download/)\n[![David deps](https://img.shields.io/david/nqdy666/nq-cache.svg?style=flat-square)](https://david-dm.org/nqdy666/nq-cache)\n[![license](https://img.shields.io/npm/l/nq-cache.svg)](https://www.npmjs.com/package/nq-cache)\n\n## 安装\n\n```bash\nnpm install nq-cache\n```\n\n## 使用\n\n- `ES Module`\n\n```javascript\nimport { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } from 'nq-cache'\n```\n\n- `commonjs`\n\n```javascript\nconst { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require('nq-cache')\n```\n\n- `UMD`(未压缩且保留注释，需自行引入 `uglify` 处理)\n\n```javascript\nconst { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require('nq-cache/dist/nq-cache')\n```\n\n- `iife`\n\n```html\n<script type=\"text/javascript\" href=\"nq-cache/dist/nq-cache.min.js\"></script>\n<script>\n  var cache = window.cache\n</script>\n```\n\n## 本地开发\n\n- 安装依赖\n\n```bash\nnpm install\n```\n\n- 测试\n\n```bash\nnpm test\n```\n\n- 打包\n\n```bash\nnpm run build\n```\n\n- `Flow`\n\n```bash\nnpm run flow\n```\n\n- `ESLint`\n\n```bash\nnpm run lint\n```\n\n- 更新文档\n\n```bash\nnpm run doc\n```\n",
+    "longname": "/home/travis/build/nqdy666/nq-cache/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"nq-cache\",\n  \"version\": \"0.0.1\",\n  \"description\": \"cache\",\n  \"main\": \"lib/index.js\",\n  \"module\": \"es/index.js\",\n  \"scripts\": {\n    \"test\": \"jest --no-cache\",\n    \"flow\": \"flow\",\n    \"prelint\": \"npm run flow\",\n    \"lint\": \"eslint ./src\",\n    \"doc\": \"esdoc\",\n    \"prebuild\": \"npm run lint && npm run compile\",\n    \"build\": \"cross-env NODE-ENV=production && rollup -c\",\n    \"compile\": \"npm run compile:cjs && npm run compile:es\",\n    \"log\": \"conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m \\\"Update CHANGELOG.md\\\"\",\n    \"compile:cjs\": \"cross-env NODE-ENV=production && babel src -d lib --no-babelrc --presets=@babel/preset-env,@babel/preset-stage-0,@babel/preset-flow\",\n    \"compile:es\": \"cross-env NODE-ENV=production && babel src -d es --no-babelrc --presets=@babel/preset-stage-0,@babel/preset-flow\",\n    \"postversion\": \"npm run log\",\n    \"codecov\": \"codecov\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"https://github.com/nqdy666/nq-cache\"\n  },\n  \"keywords\": [\n    \"cache\",\n    \"nq-cache\",\n    \"function\",\n    \"pure-function\",\n    \"memory\",\n    \"storage\"\n  ],\n  \"files\": [\n    \"lib\",\n    \"dist\",\n    \"es\"\n  ],\n  \"author\": \"nianqin <nianqin.vip@gmail.com> (https://qjzd.net/)\",\n  \"license\": \"MIT\",\n  \"devDependencies\": {\n    \"@babel/cli\": \"^7.0.0-beta.42\",\n    \"@babel/core\": \"^7.0.0-beta.42\",\n    \"@babel/preset-env\": \"^7.0.0-beta.42\",\n    \"@babel/preset-flow\": \"^7.0.0-beta.42\",\n    \"@babel/preset-stage-0\": \"^7.0.0-beta.42\",\n    \"babel-core\": \"^7.0.0-bridge.0\",\n    \"babel-eslint\": \"^8.2.2\",\n    \"babel-jest\": \"^22.4.3\",\n    \"babel-plugin-add-module-exports\": \"^0.2.1\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"codecov\": \"^3.0.2\",\n    \"conventional-changelog-cli\": \"^1.3.17\",\n    \"cross-env\": \"^5.1.4\",\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-custom-theme\": \"^1.4.2\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-flow-type-plugin\": \"^1.0.1\",\n    \"esdoc-inject-style-plugin\": \"^1.0.0\",\n    \"esdoc-publish-html-plugin\": \"^1.1.0\",\n    \"esdoc-publish-markdown-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.19.1\",\n    \"eslint-config-standard\": \"^11.0.0\",\n    \"eslint-plugin-flowtype\": \"^2.46.1\",\n    \"eslint-plugin-import\": \"^2.9.0\",\n    \"eslint-plugin-jest\": \"^21.15.0\",\n    \"eslint-plugin-node\": \"^6.0.1\",\n    \"eslint-plugin-promise\": \"^3.7.0\",\n    \"eslint-plugin-standard\": \"^3.0.1\",\n    \"flow-bin\": \"^0.66.0\",\n    \"flow-remove-types\": \"^1.2.3\",\n    \"jest\": \"^22.4.3\",\n    \"jest-localstorage-mock\": \"^2.2.0\",\n    \"rollup\": \"^0.56.5\",\n    \"rollup-plugin-alias\": \"^1.4.0\",\n    \"rollup-plugin-babel\": \"^4.0.0-beta.3\",\n    \"rollup-plugin-commonjs\": \"^9.1.0\",\n    \"rollup-plugin-flow\": \"^1.1.1\",\n    \"rollup-plugin-node-resolve\": \"^3.3.0\",\n    \"rollup-plugin-prettier\": \"^0.4.0\",\n    \"rollup-plugin-replace\": \"^2.0.0\",\n    \"rollup-plugin-uglify\": \"^3.0.0\"\n  },\n  \"browserslist\": \"last 2 versions, Android >= 4, iOS 10, not IE <= 8\",\n  \"dependencies\": {\n    \"nd-storage\": \"^3.0.0\"\n  }\n}\n",
+    "longname": "/home/travis/build/nqdy666/nq-cache/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]
