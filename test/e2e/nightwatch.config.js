@@ -20,6 +20,8 @@ module.exports = {
     'default': {
       'selenium_port': 4445,
       'selenium_host': 'localhost',
+      'username': process.env.SAUCE_USERNAME,
+      'access_key': process.env.SAUCE_ACCESS_KEY,
       'silent': true,
       'screenshots': {
         'enabled': true,

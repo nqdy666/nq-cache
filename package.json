@@ -6,7 +6,7 @@
   "module": "es/index.js",
   "scripts": {
     "test:unit": "jest --no-cache",
-    "test:e2e": "node test/e2e/runner.js",
+    "test:e2e": "npm run build && node test/e2e/runner.js",
     "test": "npm run test:unit && npm run test:e2e -- --env chrome",
     "flow": "flow",
     "prelint": "npm run flow",
