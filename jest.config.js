@@ -13,5 +13,5 @@ module.exports = {
     '<rootDir>',
     '<rootDir>/src'
   ],
-  "setupFiles": ["jest-localstorage-mock"]
+  'setupFiles': ['jest-localstorage-mock']
 }

@@ -1,11 +1,13 @@
 {
   "name": "nq-cache",
   "version": "0.0.1",
-  "description": "cache",
+  "description": "function cache",
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "test": "jest --no-cache",
+    "test:unit": "jest --no-cache",
+    "test:e2e": "node test/e2e/runner.js",
+    "test": "npm run test:unit && npm run test:e2e -- --env chrome",
     "flow": "flow",
     "prelint": "npm run flow",
     "lint": "eslint ./src",
@@ -17,8 +19,7 @@
     "compile:cjs": "cross-env NODE-ENV=production && babel src -d lib --no-babelrc --presets=@babel/preset-env,@babel/preset-stage-0,@babel/preset-flow",
     "compile:es": "cross-env NODE-ENV=production && babel src -d es --no-babelrc --presets=@babel/preset-stage-0,@babel/preset-flow",
     "postversion": "npm run log",
-    "codecov": "codecov",
-    "test:e2e": "node test/e2e/runner.js"
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
