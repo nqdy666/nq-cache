@@ -36,7 +36,7 @@ const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = 
 - `iife`
 
 ```html
-<script type="text/javascript" href="nq-cache/dist/nq-cache.min.js"></script>
+<script type="text/javascript" href="nq-cache/dist/cache.min.js"></script>
 <script>
   var cache = window.cache
 </script>
