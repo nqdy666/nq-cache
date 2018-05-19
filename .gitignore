@@ -11,6 +11,7 @@ dist
 lib
 es
 test/e2e/reports
+test/e2e/screenshots
 
 # IntelliJ project files
 .idea
