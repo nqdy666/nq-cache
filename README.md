@@ -7,6 +7,8 @@ NQ-CACHE
 [![David deps](https://img.shields.io/david/nqdy666/nq-cache.svg?style=flat-square)](https://david-dm.org/nqdy666/nq-cache)
 [![license](https://img.shields.io/npm/l/nq-cache.svg)](https://www.npmjs.com/package/nq-cache)
 
+[![Build Status](https://saucelabs.com/buildstatus/nqdy666)](https://saucelabs.com/beta/builds/e47388b0ddf2447fa18931377021695f)
+
 ## 安装
 
 ```bash

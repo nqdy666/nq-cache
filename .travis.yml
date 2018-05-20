@@ -6,7 +6,8 @@ nodejs:
 install: npm install
 
 script:
-  - npm test
+  - npm run test:unit
+  - npm run test:e2e:sauce
   - npm run codecov
   - npm run doc
 

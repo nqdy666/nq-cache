@@ -65,6 +65,62 @@ module.exports = {
         'javascriptEnabled': true,
         'acceptSslCerts': true
       }
+    },
+  
+    'ie11': {
+      'desiredCapabilities': {
+        'browserName': 'internet explorer',
+        'version': '11'
+      }
+    },
+  
+    'ie10': {
+      'desiredCapabilities': {
+        'browserName': 'internet explorer',
+        'version': '10'
+      }
+    },
+  
+    'ie9': {
+      'desiredCapabilities': {
+        'browserName': 'internet explorer',
+        'version': '9'
+      }
+    },
+  
+    'ie8': {
+      'desiredCapabilities': {
+        'browserName': 'internet explorer',
+        'version': '8'
+      }
+    },
+  
+    'edge': {
+      'desiredCapabilities': {
+        'browserName': 'MicrosoftEdge'
+      }
+    },
+  
+    'safari': {
+      'desiredCapabilities': {
+        'browserName': 'Safari'
+      }
+    },
+  
+    'iphone6': {
+      'deviceName': 'iPhone 6 Device',
+      'platformName': 'iOS',
+      'platformVersion': '8.0',
+      'browserName': 'Safari',
+      'appium-version': '1.5.1'
+    },
+    
+    'android4.4': {
+      'deviceName': 'Samsung Galaxy S5 Device',
+      'platformName': 'Android',
+      'platformVersion': '4.4',
+      'browserName': 'Chrome',
+      'name': 'S5 real device google.com'
     }
   }
 }
