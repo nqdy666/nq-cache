@@ -1,4 +1,5 @@
 NQ-CACHE
+
 =
 
 [![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)
@@ -8,6 +9,12 @@ NQ-CACHE
 [![license](https://img.shields.io/npm/l/nq-cache.svg)](https://www.npmjs.com/package/nq-cache)
 
 [![Build Status](https://saucelabs.com/browser-matrix/nqdy666.svg)](https://saucelabs.com/beta/builds/1997be72b34e41228522a3a3e065d993)
+
+### 特性
+-IE8+
+-支持Typescript
+-支持纯函数缓存
+-支持返回值为Promise的函数缓存
 
 ## 安装
 
