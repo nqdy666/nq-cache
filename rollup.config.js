@@ -6,27 +6,14 @@ import uglify from 'rollup-plugin-uglify'
 export default [{
   input: 'src/index.js',
   output: {
-    format: 'iife',
+    format: 'umd',
     file: 'dist/cache.min.js',
-    name: 'cache'
+    name: 'cache',
+    sourcemap: true
   },
   plugins: [
     resolve(),
-    babel({
-      babelrc: false,
-      runtimeHelpers: true,
-      presets: [
-        ['@babel/preset-env', {
-          targets: {
-            useBuiltIns: 'entry'
-          },
-          modules: false,
-          loose: true
-        }],
-        '@babel/preset-stage-0',
-        '@babel/preset-flow'
-      ]
-    }),
+    babel(),
     commonjs(),
     uglify()
   ]
@@ -35,25 +22,12 @@ export default [{
   output: {
     format: 'umd',
     file: 'dist/cache.js',
-    name: 'cache'
+    name: 'cache',
+    sourcemap: true
   },
   plugins: [
     resolve(),
-    babel({
-      babelrc: false,
-      runtimeHelpers: true,
-      presets: [
-        ['@babel/preset-env', {
-          targets: {
-            useBuiltIns: 'entry'
-          },
-          modules: false,
-          loose: true
-        }],
-        '@babel/preset-stage-0',
-        '@babel/preset-flow'
-      ]
-    }),
+    babel(),
     commonjs()
   ]
 }]

@@ -38,7 +38,7 @@ export const addCache = pureFuncMemoryCache(add)
 
 app.js
 ```javascript
-import { addCache as add } from './add.js'
+import { addCache as add } from './add'
 add(1, 2) // 执行，并把结果缓存
 add(1, 2) // 直接从缓存中获取结果
 ```
@@ -49,20 +49,20 @@ request.js
 ```javascript
 import { promiseMemoryCache } from 'nq-cache'
 
-export function request (data = {}) {
+export function request (data) {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve({ ...data, id: 1 })
+      resolve(data)
     }, 2 * 1000)
   })
 }
 
-export const requestCache = promiseMemoryCache(add)
+export const requestCache = promiseMemoryCache(request)
 ```
 
 app.js
 ```javascript
-import { requestCache as request } from './add.js'
+import { requestCache as request } from './request'
 // 执行，并把结果缓存
 request({ name: 'bowl' }).then(res => {
   // 直接从缓存中获取结果
@@ -76,20 +76,20 @@ request.js
 ```javascript
 import { promiseSessionStorageCache } from 'nq-cache'
 
-export function request (data = {}) {
+export function request (data) {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve({ ...data, id: 1 })
+      resolve(data)
     }, 2 * 1000)
   })
 }
 
-export const requestCache = promiseSessionStorageCache(add)
+export const requestCache = promiseSessionStorageCache(request)
 ```
 
 app.js
 ```javascript
-import { requestCache as request } from './add.js'
+import { requestCache as request } from './request'
 // 执行，并把结果缓存
 request({ name: 'bowl' }).then(res => {
   // 直接从缓存中获取结果

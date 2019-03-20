@@ -15,10 +15,9 @@
     "doc": "esdoc",
     "prebuild": "npm run lint && npm run compile",
     "build": "cross-env NODE-ENV=production && rollup -c",
-    "compile": "npm run compile:cjs && npm run compile:es",
+    "compile": "npm run compile:es",
     "log": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m \"Update CHANGELOG.md\"",
-    "compile:cjs": "cross-env NODE-ENV=production && babel src -d lib --no-babelrc --presets=@babel/preset-env,@babel/preset-stage-0,@babel/preset-flow",
-    "compile:es": "cross-env NODE-ENV=production && babel src -d es --no-babelrc --presets=@babel/preset-stage-0,@babel/preset-flow",
+    "compile:es": "cross-env NODE-ENV=production && babel src -d es --no-babelrc --presets=@babel/preset-flow",
     "postversion": "npm run log",
     "codecov": "codecov"
   },
