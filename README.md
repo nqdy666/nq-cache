@@ -84,7 +84,7 @@ export function request (data) {
   })
 }
 
-export const requestCache = promiseSessionStorageCache(request)
+export const requestCache = promiseSessionStorageCache(request, 'request')
 ```
 
 app.js
