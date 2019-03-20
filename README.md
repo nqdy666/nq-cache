@@ -1,7 +1,5 @@
 NQ-CACHE
 
-=
-
 [![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)
 [![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)
 [![node version](https://img.shields.io/badge/node.js-%3E=_8.0-green.svg?style=flat-square)](http://nodejs.org/download/)
@@ -10,46 +8,115 @@ NQ-CACHE
 
 [![Build Status](https://saucelabs.com/browser-matrix/nqdy666.svg)](https://saucelabs.com/beta/builds/1997be72b34e41228522a3a3e065d993)
 
-### 特性
--IE8+
--支持Typescript
--支持纯函数缓存
--支持返回值为Promise的函数缓存
+## 特性
+- IE8+
+- 支持Typescript
+- 支持纯函数缓存
+- 支持返回值为Promise的函数缓存
 
 ## 安装
+
+#### NPM
+安装npm包
 
 ```bash
 npm install nq-cache
 ```
 
-## 使用
+使用 `pureFuncMemoryCache`
 
-- `ES Module`
-
+add.js
 ```javascript
-import { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } from 'nq-cache'
+import { pureFuncMemoryCache } from 'nq-cache'
+
+export function add (a, b) {
+  return a + b
+}
+
+export const addCache = pureFuncMemoryCache(add)
 ```
 
-- `commonjs`
-
+app.js
 ```javascript
-const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require('nq-cache')
+import { addCache as add } from './add.js'
+add(1, 2) // 执行，并把结果缓存
+add(1, 2) // 直接从缓存中获取结果
 ```
 
-- `UMD`(未压缩且保留注释，需自行引入 `uglify` 处理)
+使用 `promiseMemoryCache`
 
+request.js
 ```javascript
-const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require('nq-cache/dist/nq-cache')
+import { promiseMemoryCache } from 'nq-cache'
+
+export function request (data = {}) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({ ...data, id: 1 })
+    }, 2 * 1000)
+  })
+}
+
+export const requestCache = promiseMemoryCache(add)
 ```
 
-- `iife`
+app.js
+```javascript
+import { requestCache as request } from './add.js'
+// 执行，并把结果缓存
+request({ name: 'bowl' }).then(res => {
+  // 直接从缓存中获取结果
+  return request({ name: 'bowl' }) 
+})
+```
+
+使用 `promiseSessionStorageCache`
+
+request.js
+```javascript
+import { promiseSessionStorageCache } from 'nq-cache'
+
+export function request (data = {}) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({ ...data, id: 1 })
+    }, 2 * 1000)
+  })
+}
+
+export const requestCache = promiseSessionStorageCache(add)
+```
+
+app.js
+```javascript
+import { requestCache as request } from './add.js'
+// 执行，并把结果缓存
+request({ name: 'bowl' }).then(res => {
+  // 直接从缓存中获取结果
+  return request({ name: 'bowl' }) 
+})
+```
+
+#### CDN
+
+仅包含 `nq-cache`
 
 ```html
-<script type="text/javascript" href="nq-cache/dist/cache.min.js"></script>
+<!-- 使用最新版本 -->
+<script src="https://unpkg.com/nq-cache@latest"></script>
+<!-- 或指定某一个版本 -->
+<script src="https://unpkg.com/nq-cache@0.0.2"></script>
 <script>
-  var cache = window.cache
+  function add (a, b) {
+    return a + b
+  }
+  addCache = cache.pureFuncMemoryCache(add)
+  addCache(1, 2) // 执行，并把结果缓存
+  addCache(1, 2) // 直接从缓存中获取结果
 </script>
 ```
+
+更多的例子
 
 ## 本地开发
 
