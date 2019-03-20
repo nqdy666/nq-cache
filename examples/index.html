@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    p {
+      margin: 0;
+    }
+    .container {
+      border: 1px solid #dddddd;
+      padding: 0 10px 10px 10px;
+    }
+    .title {
+      font-size: 18px;
+      padding-top: 10px;
+      color: gray;
+    }
+    .container td {
+      min-width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="container">
+      <p class="title">测试</p>
+      <p>pureFuncMemoryCache</p>
+      <p class="title">测试方法</p>
+      <textarea readonly rows="5" cols="55">
+function add (a, b) {
+  return a + b
+}
+var addCache = cache.pureFuncMemoryCache(add)
+      </textarea>
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <td>第一个执行</td>
+              <td>执行结果: <strong><span id="pureFmRst01"></span></strong></td>
+              <td>耗时: <strong><span id="pureFmTime01"></span></strong>ms</td>
+            </tr>
+            <tr>
+              <td>第二个执行</td>
+              <td>执行结果: <strong><span id="pureFmRst02"></span></strong></td>
+              <td>耗时: <strong><span id="pureFmTime02"></span></strong>ms</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="https://unpkg.com/nq-cache@latest/dist/cache.min.js"></script>
+<script type="text/javascript">
+  var beginTime = 0
+  var endTime = 0
+  // test pureFuncMemoryCache
+  function add (a, b) {
+    return a + b
+  }
+  var addCache = cache.pureFuncMemoryCache(add)
+
+  beginTime = new Date().getTime()
+  var addResult = addCache(1, 2) // run
+  endTime = new Date().getTime()
+  document.getElementById('pureFmRst01').innerText = addResult
+  document.getElementById('pureFmTime01').innerText = addResult
+
+  beginTime = new Date().getTime()
+  var addResultCache = addCache(1, 2)  // run
+  endTime = new Date().getTime()
+  document.getElementById('pureFmRst02').innerText = addResultCache
+  document.getElementById('pureFmTime02').innerText = addResult
+  
+  // test promiseMemoryCache
+  function request (data) {
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        resolve(data)
+      }, 2 * 1000)
+    })
+  }
+
+  var requestCache = cache.promiseMemoryCache(request)
+  requestCache({ name: 'bowl' }).then(function (res) {
+    // 直接从缓存中获取结果
+    return request({ name: 'bowl' }) 
+  }).then(function (data) {
+    console.log(data)
+  })
+
+  // test promiseSessionStorageCache
+  var requestSSCache = cache.promiseSessionStorageCache(request)
+  requestSSCache({ name: 'bowl' }).then(function (res) {
+    // 直接从缓存中获取结果
+    return request({ name: 'bowl' }) 
+  }).then(function (data) {
+    console.log(data)
+  })
+</script>
+</html>
