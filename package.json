@@ -7,7 +7,6 @@
   "web": "dist/cache.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
-  
   "files": [
     "lib",
     "dist",
