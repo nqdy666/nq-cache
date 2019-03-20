@@ -3,7 +3,31 @@
   "version": "0.0.1",
   "description": "function cache",
   "main": "lib/index.js",
+  "types": "src/index.d.ts",
+  "web": "dist/cache.js",
   "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  
+  "files": [
+    "lib",
+    "dist",
+    "es"
+  ],
+  "author": "nianqin <nianqin.vip@gmail.com> (https://github.com/nqdy666/)",
+  "contributors": [
+    {
+      "name": "nianqin",
+      "url": "https://github.com/nqdy666"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/nqdy666/nq-cache/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nqdy666/nq-cache.git"
+  },
+  "license": "MIT",
   "scripts": {
     "test:unit": "jest --no-cache",
     "test:e2e": "npm run build && node test/e2e/runner.js",
@@ -15,31 +39,16 @@
     "doc": "esdoc",
     "prebuild": "npm run lint && npm run compile",
     "build": "cross-env NODE-ENV=production && rollup -c",
-    "compile": "npm run compile:es",
+    "compile": "npm run compile:cjs && npm run compile:es",
     "log": "conventional-changelog -p eslint -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md && git commit -m \"Update CHANGELOG.md\"",
+    "compile:cjs": "cross-env NODE-ENV=production && babel src -d lib --no-babelrc --presets=@babel/preset-env,@babel/preset-flow",
     "compile:es": "cross-env NODE-ENV=production && babel src -d es --no-babelrc --presets=@babel/preset-flow",
     "postversion": "npm run log",
     "codecov": "codecov"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nqdy666/nq-cache"
+  "dependencies": {
+    "nd-storage": "^3.0.0"
   },
-  "keywords": [
-    "cache",
-    "nq-cache",
-    "function",
-    "pure-function",
-    "memory",
-    "storage"
-  ],
-  "files": [
-    "lib",
-    "dist",
-    "es"
-  ],
-  "author": "nianqin <nianqin.vip@gmail.com> (https://qjzd.net/)",
-  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
@@ -102,12 +111,17 @@
     "rollup-plugin-prettier": "^0.4.0",
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
-    "selenium-server": "^2.53.1"
-  },
-  "browserslist": "last 2 versions, Android >= 4, iOS 10, not IE <= 8",
-  "dependencies": {
+    "selenium-server": "^2.53.1",
     "cross-spawn": "^6.0.5",
-    "nd-storage": "^3.0.0",
     "phantomjs-prebuilt": "^2.1.16"
-  }
+  },
+  "browserslist": "last 2 versions, Android >= 4, iOS 10, not IE < 8",
+  "keywords": [
+    "cache",
+    "nq-cache",
+    "function",
+    "pure-function",
+    "memory",
+    "storage"
+  ]
 }
