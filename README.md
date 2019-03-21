@@ -120,6 +120,8 @@ request({ name: 'bowl' }).then(res => {
   addCache(1, 2) // 直接从缓存中获取结果
 </script>
 ```
+其他更多的方法，可以查看[例子](https://jsbin.com/baluray/edit?html,js,output)
+
 
 提示，如果浏览器不支持 Promise 或者 JSON，你应该进行 polyfill
 ```html
@@ -128,8 +130,6 @@ request({ name: 'bowl' }).then(res => {
   <script type="text/javascript" src="https://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
 <![endif]-->
 ```
-
-更多的例子
 
 ## 本地开发
 
