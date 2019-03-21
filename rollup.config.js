@@ -1,7 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 import commonjs from 'rollup-plugin-commonjs'
-import uglify from 'rollup-plugin-uglify'
+import { uglify } from 'rollup-plugin-uglify'
 
 export default [{
   input: 'src/index.js',
@@ -9,7 +9,7 @@ export default [{
     format: 'umd',
     file: 'dist/cache.min.js',
     name: 'cache',
-    legacy: true,
+    esModule: false,
     sourcemap: true
   },
   plugins: [
@@ -24,7 +24,7 @@ export default [{
     format: 'umd',
     file: 'dist/cache.js',
     name: 'cache',
-    legacy: true,
+    esModule: false,
     sourcemap: true
   },
   plugins: [
