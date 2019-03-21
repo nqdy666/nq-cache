@@ -6,24 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title></title>
-  <style>
-    p {
-      margin: 0;
-    }
-    .container {
-      border: 1px solid #dddddd;
-      padding: 0 10px 10px 10px;
-      margin-bottom: 10px;
-    }
-    .title {
-      font-size: 18px;
-      padding-top: 10px;
-      color: gray;
-    }
-    .container td {
-      min-width: 150px;
-    }
-  </style>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -123,94 +106,7 @@ var requestCache = cache.promiseSessionStorageCache(request, 'request')
   <!--[if lt IE 8]>
     <script type="text/javascript" src="https://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="../dist/cache.js"></script>
-  <script type="text/javascript">
-    function testPureFuncMemoryCache() {
-      var beginTime = 0
-      var endTime = 0
-
-      function add(a, b) {
-        return a + b
-      }
-      var addCache = cache.pureFuncMemoryCache(add)
-
-      beginTime = new Date().getTime()
-      var addResult = addCache(1, 2) // run
-      endTime = new Date().getTime()
-      document.getElementById('pureFmRst01').innerText = addResult
-      document.getElementById('pureFmTime01').innerText = endTime - beginTime
-
-      beginTime = new Date().getTime()
-      var addResultCache = addCache(1, 2) // run
-      endTime = new Date().getTime()
-      document.getElementById('pureFmRst02').innerText = addResultCache
-      document.getElementById('pureFmTime02').innerText = endTime - beginTime
-    }
-
-    function testPromiseMemoryCache() {
-      var beginTime = 0
-      var endTime = 0
-
-      function request(data) {
-        return new Promise(function (resolve) {
-          setTimeout(function () {
-            resolve(data)
-          }, 2 * 1000)
-        })
-      }
-      var requestCache = cache.promiseMemoryCache(request)
-
-      beginTime = new Date().getTime()
-      requestCache('hello').then(function (res) {
-        endTime = new Date().getTime()
-        document.getElementById('promiseFmRst01').innerText = res
-        document.getElementById('promiseFmTime01').innerText = endTime - beginTime
-
-        beginTime = new Date().getTime()
-        // 直接从缓存中获取结果
-        return requestCache('hello') // run
-      }).then(function (res) {
-        endTime = new Date().getTime()
-        document.getElementById('promiseFmRst02').innerText = res
-        document.getElementById('promiseFmTime02').innerText = endTime - beginTime
-      })
-    }
-
-    function testPromiseSessionStorageCache() {
-      var beginTime = 0
-      var endTime = 0
-
-      function request(data) {
-        return new Promise(function (resolve) {
-          setTimeout(function () {
-            resolve(data)
-          }, 2 * 1000)
-        })
-      }
-      var requestSSCache = cache.promiseSessionStorageCache(request, 'request')
-
-      beginTime = new Date().getTime()
-      requestSSCache('hello').then(function (res) {
-        endTime = new Date().getTime()
-        document.getElementById('promiseFsRst01').innerText = res
-        document.getElementById('promiseFsTime01').innerText = endTime - beginTime
-
-        beginTime = new Date().getTime()
-        // 直接从缓存中获取结果
-        return requestSSCache('hello') // run
-      }).then(function (res) {
-        endTime = new Date().getTime()
-        document.getElementById('promiseFsRst02').innerText = res
-        document.getElementById('promiseFsTime02').innerText = endTime - beginTime
-      })
-    }
-
-    testPureFuncMemoryCache()
-    testPromiseMemoryCache()
-    testPromiseSessionStorageCache()
-
-  </script>
+  <script type="text/javascript" src="https://unpkg.com/nq-cache@0.0.1/dist/cache.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
 </body>
-
-
 </html>

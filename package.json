@@ -32,7 +32,7 @@
     "test:e2e": "npm run build && node test/e2e/runner.js",
     "test:e2e:sauce": "npm run test:e2e -- --env chrome,firefox,ie11,ie10,ie9,ie8,edge,safari,iphone6,android4.4",
     "test": "npm run test:unit && npm run test:e2e -- --env phantomjs",
-    "example": "static-server -i ./examples/index.html",
+    "example": "serve ./examples",
     "flow": "flow",
     "prelint": "npm run flow",
     "lint": "eslint ./src",
@@ -114,7 +114,7 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^3.0.0",
     "selenium-server": "^2.53.1",
-    "static-server": "^2.2.1"
+    "serve": "^10.1.2"
   },
   "browserslist": "last 2 versions, Android >= 4, iOS 10, not IE < 8",
   "keywords": [
