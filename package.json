@@ -32,7 +32,7 @@
     "test:e2e": "npm run build && node test/e2e/runner.js",
     "test:e2e:sauce": "npm run test:e2e -- --env chrome,firefox,ie11,ie10,ie9,ie8,edge,safari,iphone6,android4.4",
     "test": "npm run test:unit && npm run test:e2e -- --env phantomjs",
-    "example": "serve ./examples",
+    "example": "serve",
     "flow": "flow",
     "prelint": "npm run flow",
     "lint": "eslint ./src",

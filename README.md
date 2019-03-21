@@ -168,3 +168,21 @@ npm run lint
 ```bash
 npm run doc
 ```
+
+- 运行测试页面
+
+```bash
+npm run build
+npm run example
+
+然后用浏览器打开
+http://localhost:5000/examples/
+```
+
+- 发布
+
+```bash
+npm version [new version]
+npm run build
+npm publish
+```
