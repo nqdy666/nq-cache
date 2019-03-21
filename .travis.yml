@@ -7,7 +7,7 @@ install: npm install
 
 script:
   - npm run test:unit
-  - npm run test:e2e:sauce
+# - npm run test:e2e:sauce
   - npm run codecov
   - npm run doc
 
