@@ -40,38 +40,108 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><p>NQ-CACHE
-=</p>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><p>NQ-CACHE</p>
+<blockquote>
+<p>&#x51FD;&#x6570;&#x7F13;&#x5B58;</p>
+</blockquote>
 <p><a href="https://travis-ci.org/nqdy666/nq-cache"><img src="https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master" alt="build status"></a>
 <a href="https://codecov.io/gh/nqdy666/nq-cache"><img src="https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg" alt="codecov"></a>
 <a href="http://nodejs.org/download/"><img src="https://img.shields.io/badge/node.js-%3E=_8.0-green.svg?style=flat-square" alt="node version"></a>
 <a href="https://david-dm.org/nqdy666/nq-cache"><img src="https://img.shields.io/david/nqdy666/nq-cache.svg?style=flat-square" alt="David deps"></a>
 <a href="https://www.npmjs.com/package/nq-cache"><img src="https://img.shields.io/npm/l/nq-cache.svg" alt="license"></a></p>
 <p><a href="https://saucelabs.com/beta/builds/1997be72b34e41228522a3a3e065d993"><img src="https://saucelabs.com/browser-matrix/nqdy666.svg" alt="Build Status"></a></p>
-<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2><pre><code class="lang-bash"><code class="source-code prettyprint">npm install nq-cache</code>
-</code></pre>
-<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2><ul>
-<li><code>ES Module</code></li>
+<h2 id="&#x7279;&#x6027;">&#x7279;&#x6027;</h2><ul>
+<li>IE8+</li>
+<li>&#x652F;&#x6301;Typescript</li>
+<li>&#x652F;&#x6301;&#x7EAF;&#x51FD;&#x6570;&#x7F13;&#x5B58;</li>
+<li>&#x652F;&#x6301;&#x8FD4;&#x56DE;&#x503C;Promise&#x7684;&#x51FD;&#x6570;&#x7F13;&#x5B58;</li>
+<li>&#x652F;&#x6301;&#x7F13;&#x5B58;&#x5230;sessionStorage</li>
 </ul>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } from &apos;nq-cache&apos;</code>
-</code></pre>
-<ul>
-<li><code>commonjs</code></li>
+<h2 id="&#x6587;&#x6863;">&#x6587;&#x6863;</h2><ul>
+<li><a href="https://jsbin.com/baluray/edit?html,js,output">Example on JSBin</a></li>
 </ul>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require(&apos;nq-cache&apos;)</code>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2><p>&#x5B89;&#x88C5;npm&#x5305;</p>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm install nq-cache</code>
 </code></pre>
-<ul>
-<li><code>UMD</code>(&#x672A;&#x538B;&#x7F29;&#x4E14;&#x4FDD;&#x7559;&#x6CE8;&#x91CA;&#xFF0C;&#x9700;&#x81EA;&#x884C;&#x5F15;&#x5165; <code>uglify</code> &#x5904;&#x7406;)</li>
-</ul>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">const { promiseMemoryCache, promiseSessionStorageCache, pureFuncMemoryCache } = require(&apos;nq-cache/dist/nq-cache&apos;)</code>
+<p>&#x4F7F;&#x7528; <code>pureFuncMemoryCache</code></p>
+<p>add.js</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { pureFuncMemoryCache } from &apos;nq-cache&apos;
+
+export function add (a, b) {
+  return a + b
+}
+
+export const addCache = pureFuncMemoryCache(add)</code>
 </code></pre>
-<ul>
-<li><code>iife</code></li>
-</ul>
-<pre><code class="lang-html"><code class="source-code prettyprint">&lt;script type=&quot;text/javascript&quot; href=&quot;nq-cache/dist/cache.min.js&quot;&gt;&lt;/script&gt;
+<p>app.js</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { addCache as add } from &apos;./add&apos;
+add(1, 2) // &#x6267;&#x884C;&#xFF0C;&#x5E76;&#x628A;&#x7ED3;&#x679C;&#x7F13;&#x5B58;
+add(1, 2) // &#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x7ED3;&#x679C;</code>
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>promiseMemoryCache</code></p>
+<p>request.js</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { promiseMemoryCache } from &apos;nq-cache&apos;
+
+export function request (data) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      resolve(data)
+    }, 2 * 1000)
+  })
+}
+
+export const requestCache = promiseMemoryCache(request)</code>
+</code></pre>
+<p>app.js</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { requestCache as request } from &apos;./request&apos;
+// &#x6267;&#x884C;&#xFF0C;&#x5E76;&#x628A;&#x7ED3;&#x679C;&#x7F13;&#x5B58;
+request({ name: &apos;bowl&apos; }).then(res =&gt; {
+  // &#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x7ED3;&#x679C;
+  return request({ name: &apos;bowl&apos; }) 
+})</code>
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>promiseSessionStorageCache</code></p>
+<p>request.js</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { promiseSessionStorageCache } from &apos;nq-cache&apos;
+
+export function request (data) {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; {
+      resolve(data)
+    }, 2 * 1000)
+  })
+}
+
+export const requestCache = promiseSessionStorageCache(request, &apos;request&apos;)</code>
+</code></pre>
+<p>app.js</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import { requestCache as request } from &apos;./request&apos;
+// &#x6267;&#x884C;&#xFF0C;&#x5E76;&#x628A;&#x7ED3;&#x679C;&#x7F13;&#x5B58;
+request({ name: &apos;bowl&apos; }).then(res =&gt; {
+  // &#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x7ED3;&#x679C;
+  return request({ name: &apos;bowl&apos; }) 
+})</code>
+</code></pre>
+<h4 id="cdn">CDN</h4><p>&#x4EC5;&#x5305;&#x542B; <code>nq-cache</code></p>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;!-- &#x4F7F;&#x7528;&#x6700;&#x65B0;&#x7248;&#x672C; --&gt;
+&lt;script src=&quot;https://unpkg.com/nq-cache@latest&quot;&gt;&lt;/script&gt;
+&lt;!-- &#x6216;&#x6307;&#x5B9A;&#x67D0;&#x4E00;&#x4E2A;&#x7248;&#x672C; --&gt;
+&lt;script src=&quot;https://unpkg.com/nq-cache@0.0.2&quot;&gt;&lt;/script&gt;
 &lt;script&gt;
-  var cache = window.cache
+  function add (a, b) {
+    return a + b
+  }
+  addCache = cache.pureFuncMemoryCache(add)
+  addCache(1, 2) // &#x6267;&#x884C;&#xFF0C;&#x5E76;&#x628A;&#x7ED3;&#x679C;&#x7F13;&#x5B58;
+  addCache(1, 2) // &#x76F4;&#x63A5;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x7ED3;&#x679C;
 &lt;/script&gt;</code>
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x66F4;&#x591A;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;<a href="https://jsbin.com/baluray/edit?html,js,output">&#x4F8B;&#x5B50;</a></p>
+<p>&#x63D0;&#x793A;&#xFF0C;&#x5982;&#x679C;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301; Promise &#x6216;&#x8005; JSON&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x8FDB;&#x884C; polyfill</p>
+<pre><code class="lang-html"><code class="source-code prettyprint">&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js&quot;&gt;&lt;/script&gt;
+&lt;!--[if lt IE 8]&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.bootcss.com/json2/20160511/json2.min.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</code>
 </code></pre>
 <h2 id="&#x672C;&#x5730;&#x5F00;&#x53D1;">&#x672C;&#x5730;&#x5F00;&#x53D1;</h2><ul>
 <li>&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</li>
@@ -103,11 +173,27 @@
 </ul>
 <pre><code class="lang-bash"><code class="source-code prettyprint">npm run doc</code>
 </code></pre>
+<ul>
+<li>&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x9875;&#x9762;</li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm run build
+npm run example
+
+&#x7136;&#x540E;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;
+http://localhost:5000/examples/</code>
+</code></pre>
+<ul>
+<li>&#x53D1;&#x5E03;</li>
+</ul>
+<pre><code class="lang-bash"><code class="source-code prettyprint">npm version [new version]
+npm run build
+npm publish</code>
+</code></pre>
 </div>
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>
