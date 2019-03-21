@@ -12,11 +12,14 @@ NQ-CACHE
 - IE8+
 - 支持Typescript
 - 支持纯函数缓存
-- 支持返回值为Promise的函数缓存
+- 支持返回值Promise的函数缓存
+- 支持缓存到sessionStorage
+
+## 文档
+- [Example on JSBin](https://jsbin.com/quwakos/edit?html,css,js,output)
 
 ## 安装
 
-#### NPM
 安装npm包
 
 ```bash

@@ -12,9 +12,9 @@
 <body>
   <div>
     <div class="container">
-      <p class="title">Test function</p>
+      <p class="title">测试方法</p>
       <p>pureFuncMemoryCache</p>
-      <p class="title">Test content</p>
+      <p class="title">测试内容</p>
       <textarea readonly rows="5" cols="55">
 function add (a, b) {
   return a + b
@@ -25,23 +25,23 @@ var addCache = cache.pureFuncMemoryCache(add)
         <table>
           <tbody>
             <tr>
-              <td>First execution</td>
-              <td>Result: <strong><span id="pureFmRst01"></span></strong></td>
-              <td>Elapsed time <strong><span id="pureFmTime01"></span></strong>ms</td>
+              <td>第一个执行</td>
+              <td>执行结果: <strong><span id="pureFmRst01"></span></strong></td>
+              <td>耗时: <strong><span id="pureFmTime01"></span></strong>ms</td>
             </tr>
             <tr>
-              <td>Second execution</td>
-              <td>Result: <strong><span id="pureFmRst02"></span></strong></td>
-              <td>Elapsed time <strong><span id="pureFmTime02"></span></strong>ms</td>
+              <td>第二个执行</td>
+              <td>执行结果: <strong><span id="pureFmRst02"></span></strong></td>
+              <td>耗时: <strong><span id="pureFmTime02"></span></strong>ms</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="container">
-      <p class="title">Test function</p>
+      <p class="title">测试方法</p>
       <p>promiseMemoryCache</p>
-      <p class="title">Test content</p>
+      <p class="title">测试内容</p>
       <textarea readonly rows="10" cols="55">
 function request (data) {
   return new Promise(function (resolve) {
@@ -56,23 +56,23 @@ var requestCache = cache.promiseMemoryCache(request)
         <table>
           <tbody>
             <tr>
-              <td>First execution</td>
-              <td>Result: <strong><span id="promiseFmRst01"></span></strong></td>
-              <td>Elapsed time <strong><span id="promiseFmTime01"></span></strong>ms</td>
+              <td>第一个执行</td>
+              <td>执行结果: <strong><span id="promiseFmRst01"></span></strong></td>
+              <td>耗时: <strong><span id="promiseFmTime01"></span></strong>ms</td>
             </tr>
             <tr>
-              <td>Second execution</td>
-              <td>Result: <strong><span id="promiseFmRst02"></span></strong></td>
-              <td>Elapsed time <strong><span id="promiseFmTime02"></span></strong>ms</td>
+              <td>第二个执行</td>
+              <td>执行结果: <strong><span id="promiseFmRst02"></span></strong></td>
+              <td>耗时: <strong><span id="promiseFmTime02"></span></strong>ms</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
     <div class="container">
-      <p class="title">Test function</p>
+      <p class="title">测试方法</p>
       <p>promiseSessionStorageCache</p>
-      <p class="title">Test content</p>
+      <p class="title">测试内容</p>
       <textarea readonly rows="10" cols="70">
 function request (data) {
   return new Promise(function (resolve) {
@@ -87,14 +87,14 @@ var requestCache = cache.promiseSessionStorageCache(request, 'request')
         <table>
           <tbody>
             <tr>
-              <td>First execution</td>
-              <td>Result: <strong><span id="promiseFsRst01"></span></strong></td>
-              <td>Elapsed time <strong><span id="promiseFsTime01"></span></strong>ms</td>
+              <td>第一个执行</td>
+              <td>执行结果: <strong><span id="promiseFsRst01"></span></strong></td>
+              <td>耗时: <strong><span id="promiseFsTime01"></span></strong>ms</td>
             </tr>
             <tr>
-              <td>Second execution</td>
-              <td>Result: <strong><span id="promiseFsRst02"></span></strong></td>
-              <td>Elapsed time <strong><span id="promiseFsTime02"></span></strong>ms</td>
+              <td>第二个执行</td>
+              <td>执行结果: <strong><span id="promiseFsRst02"></span></strong></td>
+              <td>耗时: <strong><span id="promiseFsTime02"></span></strong>ms</td>
             </tr>
           </tbody>
         </table>
