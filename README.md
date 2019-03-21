@@ -1,5 +1,7 @@
 NQ-CACHE
 
+> 函数缓存
+
 [![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)
 [![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)
 [![node version](https://img.shields.io/badge/node.js-%3E=_8.0-green.svg?style=flat-square)](http://nodejs.org/download/)
@@ -16,7 +18,7 @@ NQ-CACHE
 - 支持缓存到sessionStorage
 
 ## 文档
-- [Example on JSBin](https://jsbin.com/quwakos/edit?html,css,js,output)
+- [Example on JSBin](https://jsbin.com/baluray/edit?html,js,output)
 
 ## 安装
 
@@ -117,6 +119,14 @@ request({ name: 'bowl' }).then(res => {
   addCache(1, 2) // 执行，并把结果缓存
   addCache(1, 2) // 直接从缓存中获取结果
 </script>
+```
+
+提示，如果浏览器不支持 Promise 或者 JSON，你应该进行 polyfill
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<!--[if lt IE 8]>
+  <script type="text/javascript" src="https://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
+<![endif]-->
 ```
 
 更多的例子
