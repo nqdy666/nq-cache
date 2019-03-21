@@ -118,11 +118,12 @@ var requestCache = cache.promiseSessionStorageCache(request, 'request')
       </div>
     </div>
   </div>
-  <!--[if IE]>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-  <![endif]-->
+  <!-- for IE -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/nq-cache@latest/dist/cache.js"></script>
+  <!--[if lt IE 8]>
+    <script type="text/javascript" src="https://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="../dist/cache.js"></script>
   <script type="text/javascript">
     function testPureFuncMemoryCache() {
       var beginTime = 0

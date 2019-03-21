@@ -9,6 +9,7 @@ export default [{
     format: 'umd',
     file: 'dist/cache.min.js',
     name: 'cache',
+    legacy: true,
     sourcemap: true
   },
   plugins: [
@@ -23,6 +24,7 @@ export default [{
     format: 'umd',
     file: 'dist/cache.js',
     name: 'cache',
+    legacy: true,
     sourcemap: true
   },
   plugins: [
