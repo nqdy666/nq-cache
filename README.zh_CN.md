@@ -1,6 +1,6 @@
 NQ-CACHE
 
-> Function cache
+> 函数缓存
 
 [![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)
 [![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)
@@ -8,22 +8,22 @@ NQ-CACHE
 [![David deps](https://img.shields.io/david/nqdy666/nq-cache.svg?style=flat-square)](https://david-dm.org/nqdy666/nq-cache)
 [![license](https://img.shields.io/npm/l/nq-cache.svg)](https://www.npmjs.com/package/nq-cache)
 
-## Features
+## 特性
 - IE8+
-- Support for Typescript
+- 支持Typescript
 
-## Document
+## 文档
 - [Example on JSBin](https://jsbin.com/baluray/edit?html,js,output)
 
-## Installation
+## 安装
 
-Install npm package
+安装npm包
 
 ```bash
 npm install nq-cache
 ```
 
-Use `pureFuncMemoryCache`
+使用 `pureFuncMemoryCache`
 
 add.js
 ```javascript
@@ -39,8 +39,8 @@ export const addCache = pureFuncMemoryCache(add)
 app.js
 ```javascript
 import { addCache as add } from './add'
-add(1, 2) // execute and cache the result
-add(1, 2) // Get results directly from the cache
+add(1, 2) // 执行，并把结果缓存
+add(1, 2) // 直接从缓存中获取结果
 ```
 
 使用 `promiseMemoryCache`
