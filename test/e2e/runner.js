@@ -12,7 +12,7 @@ if (args.indexOf('--config') === -1) {
   args = args.concat(['--config', 'test/e2e/nightwatch.config.js'])
 }
 if (args.indexOf('--env') === -1) {
-  args = args.concat(['--env', 'chrome,phantomjs'])
+  args = args.concat(['--env', 'chrome'])
 }
 var i = args.indexOf('--test')
 if (i > -1) {
