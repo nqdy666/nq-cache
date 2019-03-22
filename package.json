@@ -1,6 +1,6 @@
 {
   "name": "nq-cache",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "function cache",
   "main": "lib/index.js",
   "types": "src/index.d.ts",
