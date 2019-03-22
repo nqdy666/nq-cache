@@ -1,6 +1,6 @@
 NQ-CACHE
 
-> Function cache
+> function cache
 
 [![build status](https://api.travis-ci.org/nqdy666/nq-cache.svg?branch=master)](https://travis-ci.org/nqdy666/nq-cache)
 [![codecov](https://codecov.io/gh/nqdy666/nq-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/nqdy666/nq-cache)
@@ -13,7 +13,7 @@ NQ-CACHE
 - Support for Typescript
 
 ## Document
-- [Example on JSBin](https://jsbin.com/baluray/edit?html,js,output)
+- [Example on JSBin] (https://jsbin.com/baluray/edit?html,js,output)
 
 ## Installation
 
@@ -30,7 +30,7 @@ add.js
 import { pureFuncMemoryCache } from 'nq-cache'
 
 export function add (a, b) {
-  return a + b
+  return a + b
 }
 
 export const addCache = pureFuncMemoryCache(add)
@@ -43,7 +43,7 @@ add(1, 2) // execute and cache the result
 add(1, 2) // Get results directly from the cache
 ```
 
-使用 `promiseMemoryCache`
+use `promiseMemoryCache`
 
 request.js
 ```javascript
@@ -63,14 +63,14 @@ export const requestCache = promiseMemoryCache(request)
 app.js
 ```javascript
 import { requestCache as request } from './request'
-// 执行，并把结果缓存
+// execute and cache the result
 request({ name: 'bowl' }).then(res => {
-  // 直接从缓存中获取结果
-  return request({ name: 'bowl' }) 
+  // get results directly from the cache
+  return request({ name: 'bowl' })
 })
 ```
 
-使用 `promiseSessionStorageCache`
+use `promiseSessionStorageCache`
 
 request.js
 ```javascript
@@ -90,57 +90,57 @@ export const requestCache = promiseSessionStorageCache(request, 'request')
 app.js
 ```javascript
 import { requestCache as request } from './request'
-// 执行，并把结果缓存
+// execute and cache the result
 request({ name: 'bowl' }).then(res => {
-  // 直接从缓存中获取结果
-  return request({ name: 'bowl' }) 
+  // Get results directly from the cache
+  return request({ name: 'bowl' })
 })
 ```
 
 #### CDN
 
-仅包含 `nq-cache`
+Contains only `nq-cache`
 
 ```html
-<!-- 使用最新版本 -->
+<!-- Use the latest version -->
 <script src="https://unpkg.com/nq-cache@latest"></script>
-<!-- 或指定某一个版本 -->
+<!-- or specify a version -->
 <script src="https://unpkg.com/nq-cache@0.0.2"></script>
 <script>
-  function add (a, b) {
-    return a + b
-  }
-  addCache = cache.pureFuncMemoryCache(add)
-  addCache(1, 2) // 执行，并把结果缓存
-  addCache(1, 2) // 直接从缓存中获取结果
+  function add (a, b) {
+    return a + b
+  }
+  addCache = cache.pureFuncMemoryCache(add)
+  addCache(1, 2) // Execute and cache the result
+  addCache(1, 2) // Get the result directly from the cache
 </script>
 ```
-其他更多的方法，可以查看[例子](https://jsbin.com/baluray/edit?html,js,output)
+For more other methods, you can view [example] (https://jsbin.com/baluray/edit?html,js,output)
 
 
-提示，如果浏览器不支持 Promise 或者 JSON，你应该进行 polyfill
+if the browser does not support Promise or JSON, you should do a polyfill
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
 <!--[if lt IE 8]>
-  <script type="text/javascript" src="https://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/json2/20160511/json2.min.js"></script>
 <![endif]-->
 ```
 
-## 本地开发
+## Local development
 
-- 安装依赖
+- Installation dependencies
 
 ```bash
 npm install
 ```
 
-- 测试
+- Testing
 
 ```bash
 npm test
 ```
 
-- 打包
+- Build
 
 ```bash
 npm run build
@@ -158,23 +158,23 @@ npm run flow
 npm run lint
 ```
 
-- 更新文档
+- Update documentation
 
 ```bash
 npm run doc
 ```
 
-- 运行测试页面
+- Run the test page
 
 ```bash
 npm run build
 npm run example
 
-然后用浏览器打开
-http://localhost:5000/examples/
+Then open it with a browser
+Http://localhost:5000/examples/
 ```
 
-- 发布
+- Release
 
 ```bash
 npm version [new version]
