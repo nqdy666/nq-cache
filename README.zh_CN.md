@@ -105,7 +105,7 @@ request({ name: 'bowl' }).then(res => {
 <!-- 使用最新版本 -->
 <script src="https://unpkg.com/nq-cache@latest"></script>
 <!-- 或指定某一个版本 -->
-<script src="https://unpkg.com/nq-cache@0.0.2"></script>
+<script src="https://unpkg.com/nq-cache@0.0.3"></script>
 <script>
   function add (a, b) {
     return a + b

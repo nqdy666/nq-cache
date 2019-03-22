@@ -105,7 +105,7 @@ Contains only `nq-cache`
 <!-- Use the latest version -->
 <script src="https://unpkg.com/nq-cache@latest"></script>
 <!-- or specify a version -->
-<script src="https://unpkg.com/nq-cache@0.0.2"></script>
+<script src="https://unpkg.com/nq-cache@0.0.3"></script>
 <script>
   function add (a, b) {
     return a + b

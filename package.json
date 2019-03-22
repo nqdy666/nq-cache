@@ -8,6 +8,7 @@
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
   "files": [
+    "src",
     "lib",
     "dist",
     "es"
@@ -29,7 +30,7 @@
   "license": "MIT",
   "scripts": {
     "test:unit": "jest --no-cache",
-    "test:e2e": "npm run build && node test/e2e/runner.js",
+    "test:e2e": "node test/e2e/runner.js",
     "test:e2e:sauce": "npm run test:e2e -- --env chrome,firefox,ie11,ie10,ie9,ie8,edge,safari,iphone6,android4.4",
     "test": "npm run test:unit && npm run test:e2e -- --env chrome",
     "example": "serve",
