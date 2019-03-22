@@ -188,3 +188,8 @@ npm version [new version]
 npm run build
 npm publish
 ```
+
+## Donation
+If you find it useful, you can buy us a cup of coffee.
+
+<img width="650" src="https://raw.githubusercontent.com/nqdy666/nq-cache/master/qrcode-donation.png" alt="donation">
