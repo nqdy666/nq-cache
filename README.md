@@ -126,6 +126,13 @@ if the browser does not support Promise or JSON, you should do a polyfill
 <![endif]-->
 ```
 
+### Methods
+- pureFuncMemoryCache
+- promiseMemoryCache
+- promiseSessionStorageCache
+- clearCache
+- argToKey
+
 ## Local development
 
 - Installation dependencies

@@ -126,6 +126,13 @@ request({ name: 'bowl' }).then(res => {
 <![endif]-->
 ```
 
+### 方法
+- pureFuncMemoryCache
+- promiseMemoryCache
+- promiseSessionStorageCache
+- clearCache
+- argToKey
+
 ## 本地开发
 
 - 安装依赖
