@@ -14,3 +14,9 @@ p {
 .container td {
   min-width: 150px;
 }
+.btn-wrapper {
+  padding-top: 10px;
+}
+.btn-clear {
+  margin-right: 5px;
+}

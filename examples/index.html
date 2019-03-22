@@ -15,8 +15,9 @@
       <p class="title">Test function</p>
       <p>pureFuncMemoryCache</p>
       <p class="title">Test content</p>
-      <textarea readonly rows="5" cols="55">
+      <textarea readonly rows="6" cols="55">
 function add (a, b) {
+  for (var i = 0; i < 10000000; i++) {}
   return a + b
 }
 var addCache = cache.pureFuncMemoryCache(add)
@@ -36,6 +37,10 @@ var addCache = cache.pureFuncMemoryCache(add)
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn btn-clear" onclick="clearPureFmFunction()">clear cache</button>
+        <button class="btn btn-re-run" onclick="reRunPureFmFunction()">rerun</button>
       </div>
     </div>
     <div class="container">
@@ -68,6 +73,10 @@ var requestCache = cache.promiseMemoryCache(request)
           </tbody>
         </table>
       </div>
+      <div class="btn-wrapper">
+        <button class="btn btn-clear" onclick="clearPromiseFmFunction()">clear cache</button>
+        <button class="btn btn-re-run" onclick="reRunPromiseFmFunction()">rerun</button>
+      </div>
     </div>
     <div class="container">
       <p class="title">Test function</p>
@@ -98,6 +107,10 @@ var requestCache = cache.promiseSessionStorageCache(request, 'request')
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn btn-clear" onclick="clearPromiseFsFunction()">clear cache</button>
+        <button class="btn btn-re-run" onclick="reRunPromiseFsFunction()">rerun</button>
       </div>
     </div>
   </div>
