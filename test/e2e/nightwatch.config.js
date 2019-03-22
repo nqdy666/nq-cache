@@ -25,8 +25,8 @@ module.exports = {
     'default': {
       'selenium_port': 4445,
       'selenium_host': 'localhost',
-      'username': 'nqdy666',
-      'access_key': '11843f06-009f-4ad0-a4e3-16e705edaf32',
+      'username': '$SAUCE_USERNAME',
+      'access_key': '$SAUCE_ACCESS_KEY',
       'silent': true,
       'screenshots': {
         'enabled': true,
